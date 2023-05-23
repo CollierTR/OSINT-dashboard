@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+	<link href="styles.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+
+  </head>
+
+  <body>
+    <header>
+	    <h1 class="title">Bloodhound</h1>          <!--CHANGE CLASS NAME!-->
+		<div id='menu-dropdown' class="hidden">
+
+			<div class="setting-halves">
+				<h2>About</h2>
+				<p>Bloodhound is a tool for gathering open source intelligence (OSINT) 
+					with a focus on tracking down human trafficking victims and offenders. All tools and links 
+					are free and checked regularly to guarantee that Bloodhound stays relevant in the fight against human trafficking.</p> 
+
+				<p>Bloodhound is an open source project.
+					 If you are interested in contributing, visit our GitHub <a href='https://github.com/CollierTR/OSINT-dashboard'
+					 id='repo-link'>repository</a>.</p>
+			</div>
+
+			<div class="setting-halves" id='setting-half-right'>
+				<h2>Settings</h2>
+				<h3>Theme</h3>
+				<div id='theme-section'>
+					<span>
+						<input type="radio" name="theme" id="black-blue" checked="checked">
+						<label for="black-blue">Black/Blue</label>
+					</span>
+					<span>
+						<input type="radio" name="theme" id="black-red">
+						<label for="black-red">Black/Red</label>
+					</span>
+					<span>
+						<input type="radio" name="theme" id="black-green">
+						<label for="black-green">Black/Green</label>
+					</span>
+					<span>
+						<input type="radio" name="theme" id="black-pink">
+						<label for="black-pink">Black/Pink</label>
+					</span>
+				</div>
+
+				<div id='tutorial-section'>
+				<label class="switch">
+					<input type="checkbox" id="tutorials">
+					<span class="slider round"></span>
+				</label>
+				<label for="tutorials">Show tutorials</label>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="menu" onclick="myFunction1('menu-dropdown')">
+			<i class="fa fa-bars" style="color: white; text-align: center; font-size: 1.7rem;
+			text-shadow: 2px 2px black, -2px -2px black;"></i>
+		</div>
+	</header>
+
+    <h2 class="menu-header">Leads</h2>
+
+	<div class="dashboard">
+	 
+	    <div  class="dropdown-1" onclick="myFunction('name')">                                     <!--name-->
+		  <h2>Name</h2>
+
+		  <div id="name" class="hidden">
+
+			<div class="close-out">
+			</div>
+
+			<div class="menu" onclick="eventStop()">
+				<ul>
+					<li><a href="https://thatsthem.com/" target="_blank">That's Them</a></li>
+					<li><a href="https://voterrecords.com/" target="_blank">Voter Records</a></li>
+					<li><a href="https://nuwber.com/" target="_blank">Number</a></li>
+					<li onclick="subShow('social')">Social media »
+					    <ul id="social" class="hidden">
+							<li><a href="https://socialblade.com" target="_blank">Social Blade</a></li> 
+							<li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+							<li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+							<li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+							<li><a href="https://www.snapchat.com/" target="_blank">Snapchat</a></li>
+							<li><a href="https://www.tiktok.com" target="_blank">Tiktok</a></li>
+							<li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
+							<li><a href="https://rumble.com/" target="_blank">Rumble</a></li>
+							<li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+							<li><a href="https://www.pinterest.com/" target="_blank">Pintrest</a></li>
+							<li><a href="https://www.reddit.com/" target="_blank">Reddit</a></li>
+							<li><a href="https://tweetdeck.twitter.com/login" target="_blank">Tweet Deck</a></li>
+							<li><a href="https://onlyfans.com/" target="_blank">OnlyFans</a></li>
+						</ul>
+					</li>
+					<li onclick="subShow('chat')">Chat sites »
+						<ul id="chat">
+							<li><a href="https://kik.com" target="_blank">KIK</a></li>
+							<li><a href="https://www.grindr.com" target="_blank">Grinder</a></li>
+						</ul>
+					</li>
+					<li onclick="subShow('dating')">Dating Sites »
+						<ul class="left" id="dating">
+							<li><a href="https://tinder.com" target="_blank">Tinder</a></li>
+							<li><a href="https://www.christianmingle.com" target="_blank">Christian Mingle</a></li>
+							<li><a href="http://www.eharmony.com/" target="_blank">E-Harmony</a></li>
+							<li><a href="http://www.match.com/" target="_blank">Match.com</a></li>
+							<li><a href="https://www.okcupid.com/" target="_blank">Ok Cupid</a></li>
+						</ul>
+					</li>
+			    	<li><a href="https://www.nsopw.gov/" target="_blank">Sex Offender Registry</a></li>
+				</ul>
+
+
+		</div>
+		  </div>
+		</div>
+	 
+
+	  <div class="dropdown-1" onclick="myFunction('img')">                                <!--Reverse Image Search-->
+	  <h2>Image</h2>
+
+	  <div id='img' class="hidden">
+		<div class="menu" onclick="eventStop()">
+			<ul>
+				<li><a href="https://cleanup.pictures/" target="_blank">cleanup.pictures</a></li>
+				<li><a href="https://tineye.com/" target="_blank">TinEye</a></li>
+				<li><a href="https://www.google.nl/webhp?hl=en" target="_blank">Google</a></li>
+				<li><a href="https://www.bing.com/visualsearch" target="_blank">Bing</a></li>
+				<li><a href="https://yandex.com/images/" target="_blank">Yandex</a></li>
+				<li><a href='https://exifinfo.org/' target="_blank">Metadata Viewer</a></li>
+				<li><a href='https://www.remove.bg/' target="_blank">Background Remover</a></li>
+				<li><a href='https://29a.ch/photo-forensics/#forensic-magnifier' target="_blank">Image Magnifier</a></li>
+		    </ul>
+		</div>
+	  </div>
+	  </div>
+
+	  <div class="dropdown-1" onclick="myFunction('address')" >                              <!--address OSINT-->
+		<h2>Address</h2>	  
+
+		<div id='address' class="hidden">
+			<div class="menu" onclick="eventStop()">
+				
+					<ul>
+						<li><a href="https://www.zillow.com/" target="_blank">Zillow</a></li>
+						<li><a href='https://lookups.melissa.com/' target="_blank">Melissa</a></li>
+						<li><a href="https://nuwber.com/" target="_blank">Nuber</a></li>
+					</ul>
+				  
+			</div>
+		</div>
+	   </div>
+
+	    <div class="dropdown-1" onclick="myFunction('user')">                             <!--User Name OSINT-->
+			<h2>Username</h2>
+
+			<div id="user" class="hidden">
+				<div class="menu" onclick="eventStop()">
+					<ul>
+						<li><a href="https://whatsmyname.app/#" target="_blank">Username Search</a></li>
+						<li><a href="https://www.social-searcher.com/google-social-search/"
+							target="_blank">Social Searcher</a></li>
+					</ul>
+				</div>
+			</div>
+			</div> 
+	
+			<div class="dropdown-1" onclick="myFunction('email')">  	                         <!--email-->
+				<h2>Email</h2>
+
+				<div id="email" class="hidden">
+					<div class="menu" onclick="eventStop()">
+						<ul>
+							<li><a href="https://haveibeenpwned.com/" target="_blank">haveibeenpwned</a></li>
+							<li><a href="https://epieos.com/" target="_blank">Epieos</a></li>
+						</ul>
+					</div>
+				</div>
+				</div> 
+	
+
+		
+
+	   <div class="dropdown-1" onclick="myFunction('ip')">  	                                 <!--IP-->
+		<h2>IP-Address</h2>
+
+		<div id="ip" class="hidden">
+			<div class="menu" onclick="eventStop()">
+				<ul>
+					<li><a href="https://www.google.nl/webhp?hl=en" target="_blank">Google</a></li>
+					<li><a href="https://iplogger.org" target="_blank">IP LOGGER</a></li>
+					<li><a href="https://grabify.link/" target="_blank">Grabify</a></li>
+					<li><a href="https://www.geolocation.com/" target="_blank">Geolocation.com</a></li>
+					<li><a href='https://who.is/' target="_blank">Who.is</a></li>
+					<li><a href='https://viewdns.info/traceroute/?domain=1' target="_blank">traceroute</a></li>
+					<li><a href='https://viewdns.info/portscan/?host=1' target="_blank">Port Scanner</a></li>
+					<li><a href='https://www.shodan.io/' target='_blank'>Shodan</a></li>
+				</ul>
+			</div>
+		</div>
+		</div> 
+
+	  <div class="dropdown-1" onclick="myFunction('business')">  	                           <!--business-->
+		<h2>Business</h2>
+
+		<div id="business" class="hidden">
+			<div class="menu" onclick="eventStop()">
+				<ul>
+					<li><a href="https://hunter.io/" target="_blank">hunter.io</a></li>
+				</ul>
+			</div>
+		</div>
+		</div> 
+
+	  <div class="dropdown-1" onclick="myFunction('website')">  	                         <!--website-->
+		<h2>Website</h2>
+
+		<div id="website" class="hidden">
+			<div class="menu" onclick="eventStop()">
+				<ul>
+					<li><a href="wayback.archive.org" target="_blank">The Way Back Machine</a></li>
+					<li><a href='https://builtwith.com/' target='_blank'>builtwith.com</a></li>
+					<li><a href='https://who.is/' target="_blank">Who.is</a></li>
+					<li><a href='https://viewdns.info/traceroute/?domain=1' target="_blank">traceroute</a></li>
+				</ul>
+			</div>
+		</div>
+		</div> 
+
+		<div class="dropdown-1" onclick="myFunction('phone')">  	                        <!--phone-->
+			<h2>Phone Number</h2>
+
+			<div id="phone" class="hidden">
+				<div class="menu" onclick="eventStop()">
+					<ul>
+						<li><a href="https://thatsthem.com/" target="_blank">That's Them</a></li>
+						<li><a href="https://epieos.com/" target="_blank">Epieos</a></li>
+						<li><a href="https://www.spydialer.com/" target="_blank">Spy Dialer</a></li>
+						<li><a href="https://nuwber.com/" target="_blank">Nuwber</a></li>
+						<li><a href="https://freecarrierlookup.com/" target="_blank">Carrier Lookup</a></li>
+					</ul>
+				</div>
+			</div>
+			</div> 
+	
+			<div class="dropdown-1" onclick="myFunction('travel')">  	                  <!--travel-->
+				<h2>Vehicle</h2>
+
+				<div id="travel" class="hidden">
+					<div class="menu" onclick="eventStop()">
+						<ul>
+							<li onclick="subShow('car')">Car »
+								<ul id='car'>
+									<li><a href="https://www.vehiclehistory.com/license-plate-search" target="_blank">
+										License PLate Search</a></li>
+									<li><a href="https://carmodel.toolpie.com/" target="_blank">Vehicle Identification</a></li>
+								</ul>
+							</li>
+							<li onclick="subShow('plane')">Plane »
+								<ul id="plane">
+								  <li><a href="https://flightaware.com/live/" target="_blank">Flight Aware</a></li>
+								</ul>
+							</li>
+							<li onclick="subShow('train')">Train »
+								<ul class="right" id="train">
+								  <li><a href="https://www.amtrak.com/track-your-train.html"  target="_blank">Amtrak Tracker</a></li>
+								</ul>
+							</li>
+							<li onclick="subShow('bus')">Bus »
+								<ul class='right' id="bus">
+								  <li><a href="https://www.greyhound.com/track/" target="_blank">Greyhound Bus Tracker</a></li>
+								  <li><a href="https://bustracker.megabus.com/" target="_blank">Megabus Tracker</a></li>
+								</ul>
+							</li>
+							<li onclick="subShow('boat')">Boat »
+								<ul id="boat" class="right">
+								  <li><a href="https://www.vesselfinder.com/"  target="_blank">Vessel Finder</a></li>
+								  <li><a href="https://www.marinetraffic.com/en/ais/embed/" target="_blank">Marine Traffic</a></li>
+								</ul>
+							</li>
+	
+						</ul>
+					</div>
+				</div>
+				</div> 
+	
+
+	</div>
+
+	<h2 class="menu-header">Tools</h2>
+
+	<div class="dashboard">
+
+		<div class="dropdown-1" onclick="myFunction('geo')">
+			<h2>Geolocation</h2>
+
+			<div id="geo" class="hidden">
+				<div class="menu" onclick="eventStop()">
+					<ul>
+						<li><a href="https://earth.google.com" target="_blank">Google Earth</a></li>
+						<li><a href="https://maps.google.nl" target="_blank">Google Maps</a></li>
+						<li><a href="https://whatistheplant.com/" target="_blank">Plant Identification</a></li>
+					 </ul>
+				</div>
+			</div>
+		 </div>
+		 
+		<div class="dropdown-1" onclick="myFunction('identify')">                       <!--identification---->
+			<h2>Identification</h2>	  
+
+			<div id="identify" class="hidden">
+				<div class="menu" onclick="eventStop()">
+					<ul>
+						<li><a href='https://info.publicintelligence.net/CBSA-TattooHandbook.pdf' target='_blank'>Tattoos</a></li>
+						<li><a href="https://www.nj.gov/oag/gang-signs-bro.pdf" target="_blank">Gang Signs</a></li>
+						<li onclick="subShow('lang')">Written Languages »
+							<ul id='lang' class="left">
+								<li><a href="https://translate.google.com/" target="_blank">Google Translate</a></li>
+							</ul>
+						</li>
+						<li onclick="subShow('drug')">Drug Identification »
+							<ul id='drug'>
+								<li><a href="https://www.drugs.com/imprints.php" target="_blank">Drug Identifier</a></li>
+								<li><a href="https://www.drugs.com/drug_information.html" target="_blank">Medication Info</a></li>
+								<li><a href="https://www.getsmartaboutdrugs.gov/drugs" target="_blank">Drug Guide</a></li>
+							</ul>
+						</li>
+						<li onclick="subShow('car-id')">Vehicle Identification »
+							<ul id='car-id'>
+								<li><a href="https://imageamigo.com/vehicleid/" target="_blank">Car Identifier #1</a></li>
+								<li><a href="https://carmodel.toolpie.com/" target="_blank">Car Identifier #2</a></li>
+							</ul>
+ 						</li>
+						<li><a href='https://emojipedia.org/' target='_blank'>Emojis</a></li>
+						<li><a href="https://whatistheplant.com/" target="_blank">Plant Identification</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="dropdown-1" onclick="myFunction('search')">  	                 <!--Search engines-->
+			<h2>Search Engines</h2>
+
+			<div id="search" class="hidden">
+				<div class="menu" onclick="eventStop()">
+					<ul>
+						<li><a href="https://www.google.com/" target="_blank">Google</a></li>
+						<li><a href="https://duckduckgo.com" target="_blank">Duckduckgo</a></li>
+						<li><a href="https://www.bing.com/new" target="_blank">Bing</a></li>
+						<li><a href="https://yandex.com" target="_blank">Yandex</a></li>
+						<li onclick="subShow('dorks')">Dorks »
+							<ul id='dorks' class="left">
+								<li><a href="https://www.exploit-db.com/google-hacking-database" target="_blank">Dork Database</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div> 
+
+		<div class="dropdown-1" onclick="myFunction('darkweb')">  	                       <!--Dark Web-->
+			<h2>Dark Web</h2>
+
+			<div id="darkweb" class="hidden">
+				<div class="menu" onclick="eventStop()">
+					<ul>
+						<li><a href="https://www.torproject.org" target="_blank">Tor</a></li>
+						<li><a href="https://tails.boum.org/install" target='_blank'>Tails</a></li>
+						<li><a href="https://geti2p.net/en/" target="_blank">I2P</a></li>
+						<li onclick="subShow('dark-search')">Search Engines »
+							<ul id='dark-search'>
+								<li><span>Ahmia</span> https://ahmia.fi/</li>
+								<li><span>Tor66</span> http://tor66sezptuu2nta.onion/</li>
+								<li><span>dark.fail</span> http://darkfailllnkf4vf.onion/</li>
+								<li><span>Not Evil</span> http://hss3uro2hsxfogfq.onion/</li>
+								<li><span>Candle</span> http://gjobqjj7wyczbqie.onion/</li>
+							</ul>
+						<li onclick="subShow('dark-links')">Links »
+							<ul id='dark-links'>
+								<li><span>Ahmia</span> https://ahmia.fi/</li>
+								<li><span>Tor66</span> http://tor66sezptuu2nta.onion/</li>
+							</ul>
+						</li>
+						<li><a href="http://thehiddenwiki.org" 
+							style='color: red;'
+							target="_blank">The Hidden Wiki</a></li>
+
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div> 
+
+		<div class="dropdown-1" onclick="myFunction('persona')">  	                   <!--sock puppet-->
+			<h2>Persona Generator</h2>
+
+			<div id="persona" class="hidden">
+				<div class="menu" onclick="eventStop()">
+					<ul>
+						<li><a href="https://fauxid.com/" target="_blank">Faux ID</a></li>
+					</ul>
+				</div>
+			</div>
+			</div> 
+
+			<div class="dropdown-1" onclick="myFunction('temp-email')">  	                          <!--temp email-->
+				<h2>Temporary Email</h2>
+
+				<div id="temp-email" class="hidden">
+					<div class="menu" onclick="eventStop()">
+						<ul>
+							<li><a href="https://www.guerrillamail.com" target="_blank">Guerrilla Mail</a></li>
+						</ul>
+					</div>
+				</div>
+		
+				</div> 
+
+				<div class="dropdown-1" onclick="myFunction('burner')">                  <!--burner phone-->
+					<h2>Burner Phone</h2>
+
+					<div id="burner" class="hidden">
+						<div class="menu" onclick="eventStop()">
+							<ul>
+								<li><a href="https://voice.google.com/" target="_blank">Google Voice</a></li>
+								<li><a href="https://www.burnerapp.com/" target="_blank">Burner Phone</a></li>
+							</ul>
+						</div>
+					</div>
+			
+					</div> 
+				
+				<div class="dropdown-1" onclick="myFunction('caller-id-masker')">  	                   <!--call bluffer-->
+					<h2>Caller ID Masker</h2>
+
+					<div id="caller-id-masker" class="hidden">
+						<div class="menu" onclick="eventStop()">
+							<ul>
+								<li><a href="bluffmycall.com" target="_blank">Bluff My Call</a></li>
+							</ul>
+						</div>
+					</div>
+			
+
+					</div> 
+	
+					<div class="dropdown-1" onclick="myFunction('vpn')">  	                   <!--VPN-->
+						<h2>VPN/Proxy</h2>
+
+						 <div id="vpn" class="hidden">
+						  <div class="menu" onclick="eventStop()">
+							<ul>
+								<li><a href="https://protonvpn.com/" target="_blank">Proton VPN</a></li>
+							</ul>
+						  </div>
+						</div>
+						</div> 
+				
+	
+			<div class="dropdown-1" onclick="myFunction('other')">                    <!--Resources-->
+				<h2>Other Resources</h2>
+
+				<div id="other" class="hidden">
+					<div class="menu" onclick="eventStop()">
+						<ul>
+							<li><a href="https://osintframework.com/" target="_blank">OSINT Framework</a></li>
+							<li><a href="https://www.nsopw.gov/" target="_blank">Sex Offender Registry</a></li>
+							<li><a href='https://www.blockchain.com/explorer/addresses/btc/' target="_blank">Bitcoin Wallets</a></li>
+							<li><a href="https://explorer.naco.org/index.html?find=true" target="_blank">US County Details</a></li>
+						</ul>
+					</div>
+				</div>
+
+			</div> 
+		
+<script>
+
+// function to open/close tools/leads
+function myFunction(id) {
+  var element = document.getElementById(id);
+  element.classList.toggle("show");
+}
+
+// function to open/close sub-menus
+function subShow(id) {
+  var element = document.getElementById(id);
+  element.classList.toggle("show-sub");
+  event.stopPropagation();
+}
+
+//stops the propagation of events
+function eventStop() {
+	event.stopPropagation();
+}
+
+// function to open/close settings menu
+function myFunction1(id) {
+  var element = document.getElementById(id);
+  element.classList.toggle("settings");
+}
+
+</script>
+
+	</div>
+  </body>
+</html>
