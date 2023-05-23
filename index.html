@@ -10,7 +10,7 @@
 
   </head>
 
-  <body>
+  <body onload="fullScreen()">
     <header>
 	    <h1 class="title">Bloodhound</h1>          <!--CHANGE CLASS NAME!-->
 		<div id='menu-dropdown' class="hidden">
@@ -507,6 +507,11 @@ function myFunction1(id) {
   var element = document.getElementById(id);
   element.classList.toggle("settings");
 }
+	
+function fullScreen() {
+	alert('This page was designed for full screen functionality. \nPress F11 for full screen');
+}
+
 
 </script>
 
