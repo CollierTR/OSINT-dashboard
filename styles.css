@@ -513,7 +513,7 @@ input:checked + .slider:before {
           }
 
           li {
-            font-size: 1.1rem;
+            font-size: 1.5rem;
             margin-top: 5vw;
           }
 
@@ -523,7 +523,7 @@ input:checked + .slider:before {
 
           .exit {
             color: white;
-            font-size: 2.2rem;
+            font-size: 2rem;
             display: block;
             background-color: #eb0606;
           }
