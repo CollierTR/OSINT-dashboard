@@ -529,4 +529,8 @@ input:checked + .slider:before {
             display: block;
             background-color: #eb0606;
           }
+	
+	 .dropdown-1:last-of-type {
+            margin-bottom: 50px;
+  }
 }
