@@ -58,7 +58,6 @@ header {
 body {
   background-color: black;
   font-family: sans-serif;
-  overflow: hidden;
 }
 
 .dashboard {
@@ -514,12 +513,12 @@ input:checked + .slider:before {
           }
 
           li {
-            font-size: 1.9rem;
-            margin-top: 7vw;
+            font-size: 1.1rem;
+            margin-top: 5vw;
           }
 
           ul li ul li {
-            margin-top: 7vw;
+            margin-top: 5vw;
           }
 
           .exit {
