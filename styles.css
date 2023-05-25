@@ -509,7 +509,7 @@ input:checked + .slider:before {
 
           .menu {
             position: fixed;
-            right: 0;
+	    width: 100vw;
           }
 
           li {
