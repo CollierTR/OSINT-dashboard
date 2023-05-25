@@ -510,13 +510,14 @@ input:checked + .slider:before {
           .menu {
             position: fixed;
 	    width: 100vw;
+		  margin: auto;
 	    left: 50%;
             transform: translate(-50%, 0);
           }
 
           li {
             font-size: 1.5rem;
-            margin-top: 5vw;
+            margin: 5vw 0;
           }
 
           ul li ul li {
