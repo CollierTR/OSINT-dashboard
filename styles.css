@@ -510,6 +510,8 @@ input:checked + .slider:before {
           .menu {
             position: fixed;
 	    width: 100vw;
+	    left: 50%;
+            transform: translate(-50%, 0);
           }
 
           li {
